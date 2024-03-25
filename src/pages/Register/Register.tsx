@@ -34,7 +34,7 @@ export const Register: React.FC<Props> = ({navigation}) => {
             <Button
                 title="Register"
                 onPress={() =>
-                    navigation.navigate('SignIn')
+                    navigation.navigate('Onboarding')
                 }
             />
         </View>
