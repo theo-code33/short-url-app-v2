@@ -12,7 +12,7 @@ export const Routing = () => {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen
-                    name="Onboarding !"
+                    name="Onboarding"
                     component={OnBoarding}
                 />
                 <Stack.Screen name={'Register'} component={Register}/>
