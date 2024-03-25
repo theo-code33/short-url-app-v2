@@ -1,11 +1,27 @@
-import {StyleSheet, Text, View} from "react-native";
-import {StatusBar} from "expo-status-bar";
+import {Button, StyleSheet, Text, View} from "react-native";
+import {NavigationProp} from "@react-navigation/native";
+import React from "react";
 
-export const OnBoarding = () => {
+type Props = {
+    navigation: NavigationProp<any>;
+};
+
+export const OnBoarding: React.FC<Props> = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Onboarding</Text>
-            <StatusBar style="auto" />
+            <Button
+                title="Already have an account? Sign in"
+                onPress={() =>
+                    navigation.navigate('SignIn')
+                }
+            />
+            <Button
+                title="Don't have an account? Sign up"
+                onPress={() =>
+                    navigation.navigate('Register')
+                }
+            />
         </View>
     );
 }
@@ -21,5 +37,5 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 30,
         width: '80%',
-    }
+    },
 });
